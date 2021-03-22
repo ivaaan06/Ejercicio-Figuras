@@ -13,12 +13,10 @@ public class Figura {
 
     double area;
     double perimetro;
-
-    public Figura(double area, double perimetro) {
-        this.area = area;
-        this.perimetro = perimetro;
-    }
     
+    public Figura() {
+        
+    }
 
    public double calcularPerimetro(){
        return 0;

@@ -15,8 +15,7 @@ public class Cuadrado extends Figura {
     
     public Cuadrado(double lado) {
         this.lado = lado;
-        super.area = area;
-        super.perimetro = perimetro;
+        
     }
  
     public double calcularArea(){
