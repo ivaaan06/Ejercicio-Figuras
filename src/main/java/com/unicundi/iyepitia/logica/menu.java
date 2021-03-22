@@ -14,29 +14,56 @@ import com.unicundi.iyepitia.logica.Triangulo;
 import java.util.Scanner;
 
 /**
+ * Clase que contiene el menu para realizar el calculo del area
+ * y perimetro de diferentes figuras 
  *@author Ivan Espitia
  * @author caren rodriguez
  */
+
 public class menu {
     
+    /**
+     * Metodo que Se envia a la clase Principal 
+     */
     public void menudatos(){
           
         Scanner scan = new Scanner(System.in);
         String respuesta = " ";
         //polimorfismo
         Figura[] vector = new Figura[6]; 
+        
+        /**
+         * Declaracion de variables 
+         */
         int opc =0;
         int contador=0;
+        /**
+         * Inicialización del Bucle do 
+         */
         do{
+            /**
+             * Menú de Opciones 
+             */
             System.out.println("--figuras geometricas--");
             System.out.println("1. Cuadrado");
             System.out.println("2. Triangulo");
             System.out.println("3. Rectangulo");
             System.out.println("4. Circulo");
             System.out.println("Seleccione la figura para calcular area y perimetro");
+            /**
+             * Lectura de Opciones 
+             */
             opc = scan.nextInt();
+            /**
+             * Según la opción se ejecutara el caso correspondiente 
+             */
             switch (opc){
                 case 1:
+                    /**
+                     * Instancia de la clase Cuadrado y llamado al metodo set de esta clase
+                     * Aumento del contador 
+                     * asignacion al vector 
+                     */
                     Cuadrado cua1 = new Cuadrado(0);
                     System.out.println("Cuadrado");
                     System.out.println("Ingrese el valor del lado");
@@ -46,6 +73,11 @@ public class menu {
                     contador++;
                     break;
                 case 2:
+                     /**
+                     * Instancia de la clase triangulo  y llamado al metodo set de esta clase
+                     * Aumento del contador 
+                     * asignacion al vector 
+                     */
                     Triangulo tri = new Triangulo(0, 0);
                     System.out.print("Triangulo");
                     System.err.println("ingrese la altura");
@@ -57,6 +89,11 @@ public class menu {
                     contador++;
                     break;
                 case 3:
+                     /**
+                     * Instancia de la clase Rectangulo y llamado al metodo set de esta clase
+                     * Aumento del contador 
+                     * asignacion al vector 
+                     */
                     Rectangulo rec1 = new Rectangulo(0, 0);
                     System.out.println("Rectangulo");
                     System.out.println("Ingrese la altura");
@@ -68,6 +105,11 @@ public class menu {
                     contador++;
                     break;
                 case 4:
+                     /**
+                     * Instancia de la clase Circulo y llamado al metodo set de esta clase
+                     * Aumento del contador 
+                     * asignacion al vector 
+                     */
                     Circulo cir1 = new Circulo(0);
                     System.out.println("Circulo");
                     System.out.println("Ingrese el radio");
@@ -79,11 +121,17 @@ public class menu {
                 default:
                     
             }
+            
             System.out.println("Desea ingresar una nueva figura S/N"); 
+            /**
+             * Respuesta del usuario, en base a esta se repite o no el ciclo 
+             */
             respuesta=scan.next();
             
         }while(respuesta.equals("S") || respuesta.equals("s"));  
-        //datos guardados en el vector
+       /**
+        * Datos a Guardar en el vector 
+        */
         
         for (Figura fig : vector){
             if(fig instanceof Cuadrado){

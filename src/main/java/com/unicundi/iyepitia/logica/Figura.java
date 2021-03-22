@@ -6,24 +6,46 @@
 package com.unicundi.iyepitia.logica;
 
 /**
- *
+ *Clase Abstracta, contiene los metodos que van a usar las demas clases 
  * @author Ivan Espitia
+ * @author Caren Rodriguez
+ */
+
+/**
+ * Clase padre 
  */
 public abstract class Figura {
-
-   double area;
-   double perimetro;
+/**
+ * Declaracion de Variables 
+ */
+  private  double area;
+  private  double perimetro;
     
+  /**
+   * Constructor 
+   */
+  
     public Figura() {
         
     }
-
+/**
+ * metodo de tipo publico para calcular el perimetro 
+ * @return 
+ */
    public double calcularPerimetro(){
        return 0;
    }
+   /**
+ * metodo de tipo publico para calcular el área 
+ * @return 
+ */
    public double calcularArea(){
        return 0;
    }
+   
+ /**
+ * metodo de tipo publico para imprimir los resultados 
+ */  
     public void imprimir(){
 
     }
