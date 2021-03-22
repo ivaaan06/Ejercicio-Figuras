@@ -9,7 +9,7 @@ package com.unicundi.iyepitia.logica;
  *
  * @author Ivan Espitia
  */
-public class Triangulo {
+public class Triangulo extends Figura{
 
   
     //contructor

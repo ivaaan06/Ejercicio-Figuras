@@ -9,7 +9,7 @@ package com.unicundi.iyepitia.logica;
  *
  * @author Ivan Espitia
  */
-public class Figura {
+public abstract class Figura {
 
     double area;
     double perimetro;

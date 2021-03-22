@@ -7,6 +7,7 @@ package com.unicundi.iyepitia.principal;
 
 import com.unicundi.iyepitia.logica.Circulo;
 import com.unicundi.iyepitia.logica.Cuadrado;
+import com.unicundi.iyepitia.logica.Figura;
 import com.unicundi.iyepitia.logica.Rectangulo;
 import com.unicundi.iyepitia.logica.Triangulo;
 
@@ -24,7 +25,10 @@ public class Principal {
         
         Scanner scan = new Scanner(System.in);
         String respuesta = " ";
+        //polimorfirmos
+        Figura[] vector = new Figura[6]; 
         int opc =0;
+        int contador=0;
         do{
             System.out.println("--figuras geometricas--");
             System.out.println("1. Cuadrado");
@@ -39,7 +43,8 @@ public class Principal {
                     System.out.println("Ingrese el valor del lado");
                     Cuadrado cua1 = new Cuadrado(scan.nextDouble());
                     cua1.imprimir();
-                    
+                    vector[contador]=cua1;
+                    contador++;
                     break;
                 case 2:
                     Triangulo tri = new Triangulo();
@@ -48,8 +53,9 @@ public class Principal {
                     tri.setAltura(scan.nextDouble());
                     System.err.println("Ingrese la base");
                     tri.setBase(scan.nextDouble());
-                    tri.imprimir();;
-                    
+                    tri.imprimir();
+                    vector[contador]=tri;
+                    contador++;
                     break;
                 case 3:
                     Rectangulo rec1 = new Rectangulo(0, 0);
@@ -59,7 +65,8 @@ public class Principal {
                     System.out.println("Ingrese la base");
                     rec1.setBase(scan.nextDouble());
                     rec1.imprimir();
-                 
+                    vector[contador]=rec1;
+                    contador++;
                     break;
                 case 4:
                     Circulo cir1 = new Circulo(0);
@@ -67,7 +74,8 @@ public class Principal {
                     System.out.println("Ingrese el radio");
                     cir1.setRadio(scan.nextDouble());
                     cir1.imprimir();
-                    
+                    vector[contador]=cir1;
+                    contador++;
                     break;
                 default:
                     
@@ -76,6 +84,23 @@ public class Principal {
             respuesta=scan.next();
             
         }while(respuesta.equals("S") || respuesta.equals("s"));  
+        //datos guardados en el vector
+        
+        for (Figura fig : vector){
+            if(fig instanceof Cuadrado){
+                System.out.println("Cuadrado");
+                ((Cuadrado)fig).imprimir();
+            }else if (fig instanceof Triangulo){
+                System.err.println("Triangulo");
+                ((Triangulo)fig).imprimir();
+            }else if (fig instanceof Rectangulo){
+                System.out.println("Rectangulo");
+                ((Rectangulo)fig).imprimir();
+            }else if (fig instanceof Circulo){
+                System.out.println("Circulo");
+                ((Circulo)fig).imprimir();
+            }
+        }
     }
      
     
