@@ -9,7 +9,7 @@ import com.unicundi.iyepitia.logica.Circulo;
 import com.unicundi.iyepitia.logica.Cuadrado;
 import com.unicundi.iyepitia.logica.Rectangulo;
 import com.unicundi.iyepitia.logica.Triangulo;
-import com.unicundi.iyepitia.logica.Utilitarios;
+
 import java.util.Scanner;
 
 /**
@@ -21,9 +21,9 @@ public class Principal {
     
     public static void main(String[] args){
         
-        Utilitarios util = new Utilitarios();
+        
         Scanner scan = new Scanner(System.in);
-        String respuesta = "s";
+        String respuesta = " ";
         int opc =0;
         do{
             System.out.println("--figuras geometricas--");
@@ -38,8 +38,8 @@ public class Principal {
                     System.out.println("Cuadrado");
                     System.out.println("Ingrese el valor del lado");
                     Cuadrado cua1 = new Cuadrado(scan.nextDouble());
+                    cua1.imprimir();
                     
-                    util.imprimir(cua1.calcularArea(), cua1.calcularPerimetro());
                     break;
                 case 2:
                     Triangulo tri = new Triangulo();
@@ -48,8 +48,8 @@ public class Principal {
                     tri.setAltura(scan.nextDouble());
                     System.err.println("Ingrese la base");
                     tri.setBase(scan.nextDouble());
-                    util.imprimir(tri.calcularArea(), tri.calcularPerimetro());
-                            
+                    tri.imprimir();;
+                    
                     break;
                 case 3:
                     Rectangulo rec1 = new Rectangulo(0, 0);
@@ -58,14 +58,16 @@ public class Principal {
                     rec1.setAltura(scan.nextDouble());
                     System.out.println("Ingrese la base");
                     rec1.setBase(scan.nextDouble());
-                    util.imprimir(rec1.calcularArea(), rec1.calcularPerimetro());
+                    rec1.imprimir();
+                 
                     break;
                 case 4:
                     Circulo cir1 = new Circulo(0);
                     System.out.println("Circulo");
                     System.out.println("Ingrese el radio");
                     cir1.setRadio(scan.nextDouble());
-                    util.imprimir(cir1.calcularArea(), cir1.calcularPerimetro());
+                    cir1.imprimir();
+                    
                     break;
                 default:
                     
@@ -73,7 +75,7 @@ public class Principal {
             System.out.println("Desea ingresar una nueva figura S/N"); 
             respuesta=scan.next();
             
-        }while(respuesta != "S" || respuesta != "s");  
+        }while(respuesta.equals("S") || respuesta.equals("s"));  
     }
      
     

@@ -29,4 +29,14 @@ public class Cuadrado extends Figura {
         return perimetro;
     }
     
+   
+    public void imprimir(){
+            System.out.println("El area :" +calcularArea());
+        System.out.println("El perimetro :"+ calcularPerimetro());
+        System.out.println("");
+        System.out.println("");
+    }
+    
+    
+    
 }

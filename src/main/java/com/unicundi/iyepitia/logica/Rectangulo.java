@@ -39,4 +39,14 @@ public class Rectangulo extends Figura{
         return area;
     }
     
+     public void imprimir(){
+            System.out.println("El area :" +calcularArea());
+        System.out.println("El perimetro :"+ calcularPerimetro());
+        System.out.println("");
+        System.out.println("");
+    }
+    
+    
+    
+    
 }

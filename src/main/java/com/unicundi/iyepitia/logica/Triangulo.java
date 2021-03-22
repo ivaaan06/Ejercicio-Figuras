@@ -36,4 +36,16 @@ public class Triangulo {
         double hipotenusa = Math.sqrt((base*base)+(altura*altura));
         return base+altura+hipotenusa;
     }
+    
+     public void imprimir(){
+            System.out.println("El area :" +calcularArea());
+        System.out.println("El perimetro :"+ calcularPerimetro());
+        System.out.println("");
+        System.out.println("");
+    }
+    
+    
+    
+    
+    
 }

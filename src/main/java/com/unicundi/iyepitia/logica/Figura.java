@@ -25,9 +25,6 @@ public class Figura {
        return 0;
    }
     public void imprimir(){
-        System.out.println("El area :" +area);
-        System.out.println("El perimetro :"+ perimetro);
-        System.out.println("");
-        System.out.println("");
+
     }
 }
