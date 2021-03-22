@@ -10,7 +10,8 @@ package com.unicundi.iyepitia.logica;
  * @author Ivan Espitia
  */
 public class Cuadrado extends Figura {
-    double lado;
+   private double lado;
+    
 
     
     public Cuadrado(double lado) {
@@ -36,6 +37,14 @@ public class Cuadrado extends Figura {
         System.out.println("");
         System.out.println("");
     }
+
+    public void setLado(double lado) {
+        this.lado = lado;
+    }
+    
+    
+
+  
     
     
     

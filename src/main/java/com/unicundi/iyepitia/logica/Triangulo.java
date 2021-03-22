@@ -8,26 +8,20 @@ package com.unicundi.iyepitia.logica;
 /**
  *
  * @author Ivan Espitia
+ * @author Caren Rodriguez
  */
 public class Triangulo extends Figura{
 
   
-    //contructor
-    public Triangulo() {
-    }
-    
-    public void setBase(double base) {
-        this.base = base;
-    }
+    private double base;
+    private double altura;
 
-  
-    public void setAltura(double altura) {
+    public Triangulo(double base, double altura) {
+        this.base = base;
         this.altura = altura;
     }
-    double base;
-    double altura;
-
     
+   
     
     public double calcularArea(){
         return (base*altura)/2;
@@ -44,6 +38,15 @@ public class Triangulo extends Figura{
         System.out.println("");
     }
     
+     
+     public void setBase(double base) {
+        this.base = base;
+    }
+
+  
+    public void setAltura(double altura) {
+        this.altura = altura;
+    } 
     
     
     

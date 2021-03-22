@@ -11,21 +11,14 @@ package com.unicundi.iyepitia.logica;
  */
 public class Rectangulo extends Figura{
 
+   
+      private double base;
+      private double altura;
     
     public Rectangulo(double base, double altura){
         this.base=base;
         this.altura=altura;
     }
-    public void setBase(double base) {
-        this.base = base;
-    }
-
-    public void setAltura(double altura) {
-        this.altura = altura;
-    }
-    private double base;
-    private double altura;
-
     
     //
     public double calcularPerimetro(){
@@ -46,7 +39,13 @@ public class Rectangulo extends Figura{
         System.out.println("");
     }
     
-    
+    public void setBase(double base) {
+        this.base = base;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
     
     
 }

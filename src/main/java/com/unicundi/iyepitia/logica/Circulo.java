@@ -15,9 +15,7 @@ public class Circulo extends Figura {
     public Circulo(double radio) {
         this.radio=radio;
     }    
-    public void setRadio(double radio) {
-        this.radio = radio;
-    }
+    
 
     
     public double calcularPerimetro(){
@@ -39,7 +37,9 @@ public class Circulo extends Figura {
     }
     
     
-    
+    public void setRadio(double radio) {
+        this.radio = radio;
+    }
     
     
 }

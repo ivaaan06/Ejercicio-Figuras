@@ -11,8 +11,8 @@ package com.unicundi.iyepitia.logica;
  */
 public abstract class Figura {
 
-    double area;
-    double perimetro;
+   double area;
+   double perimetro;
     
     public Figura() {
         
